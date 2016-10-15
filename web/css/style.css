@@ -1,9 +1,9 @@
-@font-face {
+/*@font-face {
 	font-family: "Helveticaneuecyr-light";
 	src(../fonts/helveticaneuecyr-light.otf);
 	font-family: "Coco Gothic Light-trial";
 	src(../fonts/Coco Gothic Light-trial.ttf);
-}
+}*/
 
 * {
 	padding: 0;
@@ -43,8 +43,12 @@ body {
 	height: 570px;
 }
 .header .logo {
+    	padding-top: 20px;
+}
+.header .logo a{
 	font-size: 34pt;
-	padding-top: 20px;
+        text-decoration: none;
+        color: #fff;
 }
 .menu {
 	float: right;
@@ -340,7 +344,7 @@ body .post .post1 {
 .post_bottom {
 	width: 100%;
 	position: absolute;
-	z-index: 5px;
+	z-index: 5;
 	bottom: -1px;
 	height: 40px;
 	background: rgba(255, 255, 255, 0.5);
