@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 body {
-	width: 100%
+	width: 100%;
 	font-family: "Helveticaneuecyr-light", sans-serif;
 }
 .bg{
@@ -443,7 +443,7 @@ body .art_bg {
 	float: right;
 	color: #2b3a42
 }
-.rigth select, .right span, .top_comment .left {c
+.rigth select, .right span, .top_comment .left {
 	vertical-align: middle;
 	line-height: 60px;
 	display: inline-block;
