@@ -14,7 +14,7 @@
 // });
 
 $(document).ready(function(){
-    $(".header").on("click","a", function (event) {
+    $(".header_block").on("click","a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
  

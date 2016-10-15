@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
-class ArticleController extends \yii\web\Controller
+class BlogNewsController extends \yii\web\Controller
 {
+    public $layout = 'news_beard';
+
     public function action404()
     {
         return $this->render('404');
@@ -14,9 +16,9 @@ class ArticleController extends \yii\web\Controller
         return $this->render('article');
     }
 
-    public function actionNews()
+    public function actionAll()
     {
-        return $this->render('news');
+        return $this->render('all');
     }
 
     public function actionSearch()
