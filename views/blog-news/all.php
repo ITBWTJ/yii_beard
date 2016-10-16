@@ -1,5 +1,5 @@
 <?php
-	$this->setPageTitle('Статьи');
+    print_r($model);
 ?>
 
 
@@ -25,82 +25,25 @@
 		</div>
 	</div>
 
-	
+	<?php foreach($model as $post): ?>
 	<section class="post">
 		<div class="container post1">
 			<div class="row">
 				<div class="post_top col-md-12">
-					<h2><a href="#">5 лучших советов по уходу за бородой</a></h2>
-					<p>09 января 2016 в 14:56 <span></span>13</p>
+					<h2><a href="#"><?= $post->name; ?></a></h2>
+					<p><?= $post->date; ?> <span></span>13</p>
 					
 				</div>
 			</div>
 			<div class="row">
-				<img width="100%" src="/images/bg_post.png" class="bg col-md-12">
+				<img width="100%" src="<?= $post->img; ?>" class="bg col-md-12">
 			</div>
 			<div class="post_bottom">
-					<div class="left">Источник: <a href="#">ru.wikihow.com</a></div>
+					<div class="left">Источник: <a href="#"><?= $post->article_url; ?></a></div>
 					<div class="right"><div class="view"></div>22<div class="like"></div>13</div>
 			</div>
 		</div>
 	</section>
+        <?php endforeach; ?>
 
 
-		<section class="post">
-		<div class="container post1">
-			<div class="row">
-				<div class="post_top col-md-12">
-					<h2><a href="#">5 лучших советов по уходу за бородой</a></h2>
-					<p>09 января 2016 в 14:56 <span></span>13</p>
-					
-				</div>
-			</div>
-			<div class="row">
-				<img width="100%" src="/images/bg_post.png" class="bg col-md-12">
-			</div>
-			<div class="post_bottom">
-					<div class="left">Источник: <a href="#">ru.wikihow.com</a></div>
-					<div class="right"><div class="view"></div>22<div class="like"></div>13</div>
-			</div>
-		</div>
-	</section>
-
-
-		<section class="post">
-		<div class="container post1">
-			<div class="row">
-				<div class="post_top col-md-12">
-					<h2><a href="#">5 лучших советов по уходу за бородой</a></h2>
-					<p>09 января 2016 в 14:56 <span></span>13</p>
-					
-				</div>
-			</div>
-			<div class="row">
-				<img width="100%" src="/images/bg_post.png" class="bg col-md-12">
-			</div>
-			<div class="post_bottom">
-							<div class="left">Источник: <a href="#">ru.wikihow.com</a></div>
-					<div class="right"><div class="view"></div>22<div class="like"></div>13</div>
-			</div>
-		</div>
-	</section>
-
-
-		<section class="post">
-		<div class="container post1">
-			<div class="row">
-				<div class="post_top col-md-12">
-					<h2><a href="#">5 лучших советов по уходу за бородой</a></h2>
-					<p>09 января 2016 в 14:56 <span></span>13</p>
-					
-				</div>
-			</div>
-			<div class="row">
-				<img width="100%" src="/images/bg_post.png" class="bg col-md-12">
-			</div>
-			<div class="post_bottom">
-									<div class="left">Источник: <a href="#">ru.wikihow.com</a></div>
-					<div class="right"><div class="view"></div>22<div class="like"></div>13</div>
-			</div>
-		</div>
-	</section>

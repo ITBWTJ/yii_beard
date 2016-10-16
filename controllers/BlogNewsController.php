@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Articles;
+
 class BlogNewsController extends \yii\web\Controller
 {
     public $layout = 'news_beard';
@@ -13,12 +15,15 @@ class BlogNewsController extends \yii\web\Controller
 
     public function actionArticle()
     {
+        $this->view->title = 'Статья';
         return $this->render('article');
     }
 
     public function actionAll()
     {
-        return $this->render('all');
+        $model = new Articles();
+        $this->view->title = 'Все статьи';
+        return $this->render('all', compact('model'));
     }
 
     public function actionSearch()

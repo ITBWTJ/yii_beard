@@ -11,6 +11,7 @@ use Yii;
  * @property string $name
  * @property string $text
  * @property string $img
+ * @property string $date
  * @property string $article_url
  */
 class Articles extends \yii\db\ActiveRecord
@@ -29,8 +30,9 @@ class Articles extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'text', 'img', 'article_url'], 'required'],
+            [['name', 'text', 'img', 'date', 'article_url'], 'required'],
             [['text'], 'string'],
+            [['date'], 'safe'],
             [['name', 'img', 'article_url'], 'string', 'max' => 255],
         ];
     }
@@ -45,6 +47,7 @@ class Articles extends \yii\db\ActiveRecord
             'name' => 'Name',
             'text' => 'Text',
             'img' => 'Img',
+            'date' => 'Date',
             'article_url' => 'Article Url',
         ];
     }
