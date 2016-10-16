@@ -1,5 +1,6 @@
 <?php
-	$this->setPageTitle('Статья');
+	use yii\helpers\Html;
+    use yii\helpers\Url;
 ?>
  	<div class="top_nav">
  		<div class="container">
@@ -23,32 +24,20 @@
  		<div class="container art_bg">
 
  			<div class="row">
- 				<h2>5 лучших способов ухода за бородой</h2>
+ 				<h2><?= $article->name; ?></h2>
  			</div>
  			<div class="row">
- 				<img src="/images/bg_post.png" class="bg col-md-12">
+ 				<img src="<?= $article->img; ?>" class="bg col-md-12">
  			</div>
- 			<div class="row">
- 				<h3>Метод 1 из 5: Отращивание бороды</h3>
 
- 			</div>
  			<div class="top_line"></div>
- 			<div class="row">
- 				<div class="post col-md-12 ">
- 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque, cum!
- 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorum iusto suscipit totam quidem aliquid harum dicta quia debitis voluptates illum, similique at modi quibusdam eveniet repudiandae? Saepe, possimus, animi?</p>
- 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque, cum!
- 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorum iusto suscipit totam quidem aliquid harum dicta quia debitis voluptates illum, similique at modi quibusdam eveniet repudiandae? Saepe, possimus, animi?</p>
- 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque, cum!
- 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorum iusto suscipit totam quidem aliquid harum dicta quia debitis voluptates illum, similique at modi quibusdam eveniet repudiandae? Saepe, possimus, animi?</p>
- 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque, cum!
- 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorum iusto suscipit totam quidem aliquid harum dicta quia debitis voluptates illum, similique at modi quibusdam eveniet repudiandae? Saepe, possimus, animi?</p>
- 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque, cum!
- 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolorum iusto suscipit totam quidem aliquid harum dicta quia debitis voluptates illum, similique at modi quibusdam eveniet repudiandae? Saepe, possimus, animi?</p>
- 									</div>
- 								</div>
- 							</div>
- 						</section>
+ 				<div class="row">
+ 					<div class="post col-md-12 ">
+ 						<?= $article->text; ?>
+ 					</div>
+ 				</div>
+ 			</div>
+ 	</section>
 
 
  						<section class="s_bot">
@@ -56,7 +45,7 @@
  								<div class="row">
  									<div class="art_bot">
  										<div class="left">
- 											<p>Источник: <a href="#">ua.wikipedia.com</a></p>
+ 											<p>Источник: <a href="<?= $article->article_url; ?>"><?= $article->article_url; ?></a></p>
  										</div>
  										<div class="right">	
 
