@@ -13,15 +13,16 @@ class BlogNewsController extends \yii\web\Controller
         return $this->render('404');
     }
 
-    public function actionArticle()
+    public function actionArticle($id)
     {
         $this->view->title = 'Статья';
-        return $this->render('article');
+        $model = Articles::findOne($id);
+        return $this->render('article',compact('model') );
     }
 
     public function actionAll()
     {
-        $model = new Articles();
+        $model = Articles::find()->all();
         $this->view->title = 'Все статьи';
         return $this->render('all', compact('model'));
     }

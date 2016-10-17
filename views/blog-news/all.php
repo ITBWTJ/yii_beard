@@ -1,5 +1,6 @@
 <?php
-    print_r($model);
+    use yii\helpers\Url;
+    use yii\helpers\Html;
 ?>
 
 
@@ -30,13 +31,13 @@
 		<div class="container post1">
 			<div class="row">
 				<div class="post_top col-md-12">
-					<h2><a href="#"><?= $post->name; ?></a></h2>
-					<p><?= $post->date; ?> <span></span>13</p>
+					<h2><a href="<?= Url::to(['blog-news/article', 'id' => $post->id]); ?>"><?= $post->name; ?></a></h2>
+					<p>Опубликовано: <?= $post->date; ?> <span></span>13</p>
 					
 				</div>
 			</div>
 			<div class="row">
-				<img width="100%" src="<?= $post->img; ?>" class="bg col-md-12">
+                            <?= Html::img("@web/images/post_imgs/$post->img", ['class' => 'bg col-md-12', 'width' => '100%'])?>
 			</div>
 			<div class="post_bottom">
 					<div class="left">Источник: <a href="#"><?= $post->article_url; ?></a></div>
