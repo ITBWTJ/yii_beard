@@ -10,6 +10,8 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+            'defaultRoute' => 'post/index',
+            'layout' => 'admin_layout'
         ],
     ],
     'components' => [
