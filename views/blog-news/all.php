@@ -1,11 +1,8 @@
 <?php
-<<<<<<< HEAD
+
 	use yii\helpers\Html;
     use yii\helpers\Url;
-=======
-    use yii\helpers\Url;
-    use yii\helpers\Html;
->>>>>>> 73a0dc827bcabe393610ccb6d684ebab0d9818fc
+
 ?>
 
 <div class="container">
@@ -35,11 +32,7 @@
 		<div class="container post1">
 			<div class="row">
 				<div class="post_top col-md-12">
-<<<<<<< HEAD
-					<h2><a href="<?= Url::to(['blog-news/article', 'id' => "$post->id"]);?>"><?= $post->name; ?></a></h2>
-=======
 					<h2><a href="<?= Url::to(['blog-news/article', 'id' => $post->id]); ?>"><?= $post->name; ?></a></h2>
->>>>>>> 73a0dc827bcabe393610ccb6d684ebab0d9818fc
 					<p>Опубликовано: <?= $post->date; ?> <span></span>13</p>
 					
 				</div>

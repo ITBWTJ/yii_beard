@@ -43,12 +43,12 @@ class Articles extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Name',
-            'text' => 'Text',
-            'img' => 'Img',
-            'date' => 'Date',
-            'article_url' => 'Article Url',
+            'id' => 'Индификатор',
+            'name' => 'Название',
+            'text' => 'Текст',
+            'img' => 'Изображение',
+            'date' => 'Дата публикации',
+            'article_url' => 'Ссылка на внешний ресурс',
         ];
     }
 }
