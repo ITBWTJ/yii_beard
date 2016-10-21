@@ -17,12 +17,21 @@ class BlogNewsController extends \yii\web\Controller
     {
         $article = Articles::findOne($id);
         $this->view->title = 'Статья';
+<<<<<<< HEAD
         return $this->render('article', compact('article'));
+=======
+        $model = Articles::findOne($id);
+        return $this->render('article',compact('model') );
+>>>>>>> 73a0dc827bcabe393610ccb6d684ebab0d9818fc
     }
 
     public function actionAll()
     {
+<<<<<<< HEAD
         $posts = Articles::find()->all();
+=======
+        $model = Articles::find()->all();
+>>>>>>> 73a0dc827bcabe393610ccb6d684ebab0d9818fc
         $this->view->title = 'Все статьи';
         return $this->render('all', compact('posts'));
     }
