@@ -7,6 +7,9 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\helpers\Url;
 
+$action = Yii::$app->controller->action->id;
+
+
 AppAsset::register($this);
 ?>
 

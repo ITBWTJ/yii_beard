@@ -1,7 +1,11 @@
 <?php
-
-	use yii\helpers\Html;
+    
+    use yii\helpers\Html;
     use yii\helpers\Url;
+    use app\models\SearchForm;
+    use yii\widgets\ActiveForm;
+    
+    $model = new SearchForm();
 
 ?>
 
@@ -20,7 +24,9 @@
 					</div>
 
 					<div class="right">
-						<input type="text" name="search" placeholder="Поиск...">
+                                            <form action="<?= Url::to(['blog-news/search']);?>" method="get">
+						<input type="text" name="str" placeholder="Поиск...">
+                                            </form>
 					</div>
 
 			</div>

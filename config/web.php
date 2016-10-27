@@ -52,7 +52,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-
+                'search' => 'blog-news/search'
             ],
         ],
         

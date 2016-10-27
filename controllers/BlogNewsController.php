@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\Articles;
 
 class BlogNewsController extends \yii\web\Controller
@@ -33,7 +34,10 @@ class BlogNewsController extends \yii\web\Controller
 
     public function actionSearch()
     {
-        return $this->render('search');
+        $s = Yii::$app->request->get('str');
+        $query = Articles::find()->where(['like', 'text', $s]);
+        $posts = $query->offset($pages->offset)->limit($pages->limit)->all();
+        return $this->render('search', compact('posts'));
     }
 
 }

@@ -13,7 +13,10 @@
  					</div>
 
  					<div class="right">
- 						<input type="text" name="search" placeholder="Поиск...">
+                                            <form action="<?= Url::to(['blog-news/search'])?>">
+                                                <input type="text" name="str" placeholder="Поиск...">
+                                            </form>
+ 						
  					</div>
 
  				</div>
