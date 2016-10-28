@@ -29,7 +29,8 @@ AppAsset::register($this);
 				<div class="logo col-md-6 col-sm-6 col-xs-12"><a href="<?= \yii\helpers\Url::home() ?>">Beard`land</a></div>
 				<div class="menu_wrap col-md-6 col-sm-6 col-xs-12">
 					<ul class="menu" id="menu">
-                                                                                     
+                                                                                                                             
+                                                <li><a href="<?= Url::to(['/admin/post/logout']) ?>">Выйти</a></li>
                                                 <li><a href="<?= Url::to(['/admin/post/create']) ?>">Добавить</a></li>
                                                 <li><a href="<?= Url::to(['/admin/post/index']) ?>">Статьи</a></li> 
 						<li><a href="<?= \yii\helpers\Url::home() ?>">Главная</a></li>	

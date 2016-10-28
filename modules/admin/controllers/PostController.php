@@ -8,16 +8,33 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\LoginForm;
+use yii\filters\AccessControl;
+use app\models\ContactForm;
 
 /**
  * PostController implements the CRUD actions for Articles model.
  */
-class PostController extends AdminController
+class PostController extends Controller
 {
     /**
      * @inheritdoc
      */
+    public function behaviors()
+    {
+        return [
+            'access' =>  [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@']                    
+                    ]
 
+                ]
+            ]
+        ];
+    }
 
     /**
      * Lists all Articles models.
@@ -110,5 +127,30 @@ class PostController extends AdminController
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    
+        public function actionLogin()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new LoginForm();
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return $this->goBack();
+        }
+        return $this->render('login', compact('model'));
+    }
+
+    /**
+     * Logout action.
+     *
+     * @return string
+     */
+    public function actionLogout()
+    {
+        Yii::$app->user->logout();
+
+        return $this->goHome();
     }
 }
