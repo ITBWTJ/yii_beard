@@ -41,7 +41,7 @@ AppAsset::register($this);
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="title_art"><h1>Статьи</h1></div>
+				<div class="title_art"><h1><?= $this->title; ?></h1></div>
 			</div>
 		</div>
 		

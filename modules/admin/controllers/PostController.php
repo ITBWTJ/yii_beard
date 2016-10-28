@@ -12,22 +12,12 @@ use yii\filters\VerbFilter;
 /**
  * PostController implements the CRUD actions for Articles model.
  */
-class PostController extends Controller
+class PostController extends AdminController
 {
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
+
 
     /**
      * Lists all Articles models.

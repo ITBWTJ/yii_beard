@@ -34,10 +34,10 @@ class BlogNewsController extends \yii\web\Controller
 
     public function actionSearch()
     {
-        $s = Yii::$app->request->get('str');
-        $query = Articles::find()->where(['like', 'text', $s]);
+        $str = Yii::$app->request->get('str');
+        $query = Articles::find()->where(['like', 'text', $str]);
         $posts = $query->offset($pages->offset)->limit($pages->limit)->all();
-        return $this->render('search', compact('posts'));
+        return $this->render('search', compact('posts', 'str'));
     }
 
 }

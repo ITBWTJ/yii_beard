@@ -3,8 +3,7 @@
     use yii\helpers\Html;
     use yii\helpers\Url;
     
-    $this->title = "Найдено";
-    debug($posts);
+    $this->title = "Поиск по запросу: $str";
 ?>
 
 <div class="container">
