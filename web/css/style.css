@@ -521,3 +521,9 @@ body .art_bg {
 .container:last-child {
 	border: none;
 }
+
+/* ***** FORM LOGIN ***** */
+
+#login-form {
+	max-width: 400px;
+}
