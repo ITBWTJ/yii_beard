@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use yii\filters\AccessControl;
 use app\models\ContactForm;
+use yii\web\UploadedFile;
 
 /**
  * PostController implements the CRUD actions for Articles model.
@@ -92,6 +93,13 @@ class PostController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image) {
+                $model->upload();
+            }
+
+            Yii::$app->session->setFlash('success', "Стаття {$model->name} добавленна");
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

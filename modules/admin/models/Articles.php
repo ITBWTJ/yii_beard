@@ -19,6 +19,9 @@ class Articles extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $image;
+    public $gallery;
+
     public static function tableName()
     {
         return 'articles';
@@ -42,6 +45,8 @@ class Articles extends \yii\db\ActiveRecord
             [['text'], 'string'],
             [['date'], 'safe'],
             [['name', 'img', 'article_url'], 'string', 'max' => 255],
+            [['image'], 'file' , 'extensions' => 'png, jpg'],
+            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
 
@@ -54,9 +59,18 @@ class Articles extends \yii\db\ActiveRecord
             'id' => 'Индификатор',
             'name' => 'Название',
             'text' => 'Текст',
-            'img' => 'Изображение',
+            'image' => 'Изображение',
             'date' => 'Дата публикации',
             'article_url' => 'Ссылка на внешний ресурс',
         ];
+    }
+
+    public function upload() {
+        if($this->validate()) {
+            $path = 'images/store/' . $this->image->baseName . '.' . $this->image->extension;
+            $this->image->saveAs($path);
+            return true;
+        }
+        return false;
     }
 }

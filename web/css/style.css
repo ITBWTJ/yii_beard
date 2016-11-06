@@ -527,3 +527,8 @@ body .art_bg {
 #login-form {
 	max-width: 400px;
 }
+.form-group #articles-image {
+	border: none;
+	line-height: 0;
+	font-size: 13px;
+}
