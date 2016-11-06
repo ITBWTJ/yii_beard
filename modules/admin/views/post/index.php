@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="articles-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="container"><div class="row"><div class="col-md-12"><br></div></div></div>
 
     <p>
         <?= Html::a('Создать статью', ['create'], ['class' => 'btn btn-success']) ?>
@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'text:ntext',
-            'img',
+            'image',
             'date',
             // 'article_url:url',
 

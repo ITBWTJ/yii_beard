@@ -8,9 +8,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
 use yii\filters\AccessControl;
-use app\models\ContactForm;
 use yii\web\UploadedFile;
 
 /**
@@ -93,6 +91,7 @@ class PostController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            
             $model->image = UploadedFile::getInstance($model, 'image');
             if($model->image) {
                 $model->upload();

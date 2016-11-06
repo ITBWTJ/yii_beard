@@ -20,7 +20,7 @@ class Articles extends \yii\db\ActiveRecord
      * @inheritdoc
      */
     public $image;
-    public $gallery;
+//    public $gallery;
 
     public static function tableName()
     {
@@ -41,12 +41,12 @@ class Articles extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'text', 'img', 'date', 'article_url'], 'required'],
+            [['name', 'text'], 'required'],
             [['text'], 'string'],
             [['date'], 'safe'],
             [['name', 'img', 'article_url'], 'string', 'max' => 255],
             [['image'], 'file' , 'extensions' => 'png, jpg'],
-            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
+//            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
 
@@ -69,6 +69,8 @@ class Articles extends \yii\db\ActiveRecord
         if($this->validate()) {
             $path = 'images/store/' . $this->image->baseName . '.' . $this->image->extension;
             $this->image->saveAs($path);
+            $this->attachImage($path);
+            @unlink($path);
             return true;
         }
         return false;
