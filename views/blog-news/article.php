@@ -2,6 +2,7 @@
 <?php
 	use yii\helpers\Html;
     use yii\helpers\Url;
+    $image = $article->getImage();
 ?>
  	<div class="top_nav">
  		<div class="container">
@@ -31,7 +32,7 @@
  				<h2><?= $article->name; ?></h2>
  			</div>
  			<div class="row">
- 				<img src="<?= $article->img; ?>" class="bg col-md-12">
+ 				<img src="<?= $image->getUrl(); ?>" class="bg col-md-12">
  			</div>
 
  			<div class="top_line"></div>

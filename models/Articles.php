@@ -19,9 +19,20 @@ class Articles extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $image;
+   
     public static function tableName()
     {
         return 'articles';
+    }
+    
+        public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
     }
 
     /**

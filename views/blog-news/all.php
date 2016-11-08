@@ -34,6 +34,7 @@
 	</div>
 
 	<?php foreach($posts as $post): ?>
+        <?php $image = $post->getImage(); ?>
 	<section class="post">
 		<div class="container post1">
 			<div class="row">
@@ -44,7 +45,7 @@
 				</div>
 			</div>
 			<div class="row">
-                            <?= Html::img("@web/images/post_imgs/$post->img", ['class' => 'bg col-md-12', 'width' => '100%'])?>
+                            <?= Html::img("{$image->getUrl()}", ['class' => 'bg col-md-12', 'width' => '100%'])?>
 			</div>
 			<div class="post_bottom">
 					<div class="left">Источник: <a href="<?= $post->article_url; ?>"><?= $post->article_url; ?></a></div>
