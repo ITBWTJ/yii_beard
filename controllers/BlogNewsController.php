@@ -25,10 +25,15 @@ class BlogNewsController extends \yii\web\Controller
 
     public function actionAll()
     {
-
-        $posts = Articles::find()->all();
-
+        $cache = Yii::$app->cache;
+        $posts = $cache->get('cache-articles');
+        if(!$posts)
+        {
+            $posts = Articles::find()->all();
+            $cache->add('cache-articles', $posts , 300 );
+        }
         $this->view->title = 'Все статьи';
+
         return $this->render('all', compact('posts'));
     }
 

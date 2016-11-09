@@ -532,3 +532,6 @@ body .art_bg {
 	line-height: 0;
 	font-size: 13px;
 }
+.pad {
+    margin-top: 20px;
+}

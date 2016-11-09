@@ -41,6 +41,15 @@ class PostController extends Controller
      */
     public function actionIndex()
     {
+        
+        $cache = Yii::$app->cache;
+        $posts = $cache->get('data');
+        if(!$posts)
+        {
+            $posts = Articles::find();
+            $cache->add('data', $posts , 300 );
+        }
+        
         $dataProvider = new ActiveDataProvider([
             'query' => Articles::find(),
         ]);
@@ -72,6 +81,7 @@ class PostController extends Controller
         $model = new Articles();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', "Статья добавлена");
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -97,7 +107,7 @@ class PostController extends Controller
                 $model->upload();
             }
 
-            Yii::$app->session->setFlash('success', "Стаття {$model->name} добавленна");
+            Yii::$app->session->setFlash('success', "Стаття обновлена");
 
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
