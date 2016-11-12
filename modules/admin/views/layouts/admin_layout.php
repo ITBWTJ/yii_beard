@@ -58,12 +58,12 @@ AppAsset::register($this);
 			<div class="row">
 			<div class="col-md-3"></div>
 				<div class="icons col-md-6">
-					<a href="#"><i class='g'></i></a>
-					<a href="#"><i class="be"></i></a>
-					<a href="#"><i class="f"></i></a>
-					<a href="#"><i class="vk"></i></a>
-					<a href="#"><i class="tw"></i></a>
-					<a href="#"><i class="in"></i></a>
+					<a href="#"><i class='image g'></i></a>
+					<a href="#"><i class="image be"></i></a>
+					<a href="#"><i class="image f"></i></a>
+					<a href="#"><i class="image vk"></i></a>
+					<a href="#"><i class="image tw"></i></a>
+					<a href="#"><i class="image in"></i></a>
 				</div>
 				<div class="col-md-3"></div>
 			</div>

@@ -20,7 +20,9 @@
         "yiisoft/yii2-swiftmailer": "*",
         "costa-rico/yii2-images": "dev-master",
         "mihaildev/yii2-ckeditor": "*",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "kartik-v/yii2-widget-datetimepicker": "*",
+        "2amigos/yii2-date-time-picker-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
