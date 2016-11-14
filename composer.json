@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "*",
         "costa-rico/yii2-images": "dev-master",
         "mihaildev/yii2-ckeditor": "*",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "rmrevin/yii2-comments": "~1.4"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

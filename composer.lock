@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e1dab358a9a971f9d29d5aa051b288a",
-    "content-hash": "762352f60b67edcf549fc9708d639c03",
+    "hash": "6e2cdcb5c6a0f1ae8f635bac5dda2324",
+    "content-hash": "f5a6402762072427977008d5ef22a683",
     "packages": [
         {
             "name": "abeautifulsite/simpleimage",
@@ -528,6 +528,108 @@
                 "yii"
             ],
             "time": "2016-06-30 12:03:17"
+        },
+        {
+            "name": "rmrevin/yii2-comments",
+            "version": "1.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-comments.git",
+                "reference": "dfc463a37336a3fc7c39698b4b41b2c79f2fb56a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-comments/zipball/dfc463a37336a3fc7c39698b4b41b2c79f2fb56a",
+                "reference": "dfc463a37336a3fc7c39698b4b41b2c79f2fb56a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "rmrevin/yii2-fontawesome": "~2.10",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\module\\Comments\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Revin",
+                    "email": "xgismox@gmail.com",
+                    "homepage": "http://rmrevin.ru/"
+                }
+            ],
+            "description": "Comments module for Yii2",
+            "keywords": [
+                "comment",
+                "module",
+                "widget",
+                "yii"
+            ],
+            "time": "2016-06-27 10:30:28"
+        },
+        {
+            "name": "rmrevin/yii2-fontawesome",
+            "version": "2.16.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmrevin/yii2-fontawesome.git",
+                "reference": "ab08282b8cd05c570634926f41c868cf902981e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/ab08282b8cd05c570634926f41c868cf902981e7",
+                "reference": "ab08282b8cd05c570634926f41c868cf902981e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "2.0.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "rmrevin\\yii\\fontawesome\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Revin Roman",
+                    "email": "roman@rmrevin.com",
+                    "homepage": "https://rmrevin.com/"
+                }
+            ],
+            "description": "Asset Bundle for Yii2 with Font Awesome",
+            "keywords": [
+                "asset",
+                "awesome",
+                "bundle",
+                "font",
+                "yii"
+            ],
+            "time": "2016-08-31 12:41:25"
         },
         {
             "name": "studio-42/elfinder",

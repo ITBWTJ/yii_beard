@@ -2,13 +2,29 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+class User extends \yii\base\Object implements \yii\web\IdentityInterface,
+        \rmrevin\yii\module\Comments\interfaces\CommentatorInterface
 {
     public $id;
     public $username;
     public $password;
     public $authKey;
     public $accessToken;
+    
+    public function getCommentatorAvatar()
+    {
+        return $this->avatar_url;
+    }
+
+    public function getCommentatorName()
+    {
+        return $this->name;
+    }
+
+    public function getCommentatorUrl()
+    {
+        return ['/profile', 'id' => $this->id]; // or false, if user does not have a public page
+    }
 
     private static $users = [
         '100' => [

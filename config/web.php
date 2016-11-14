@@ -22,6 +22,11 @@ $config = [
             'graphicsLibrary' => 'GD', //but really its better to use 'Imagick' 
             'placeHolderPath' => '@webroot/images/post__imgs/image1.png', // if you want to get placeholder when image not exists, string will be processed by Yii::getAlias
         ],
+         'comments' => [
+            'class' => 'rmrevin\yii\module\Comments\Module',
+            'userIdentityClass' => 'app\models\User',
+            'useRbac' => true,
+        ]
     ],
     'components' => [
         'request' => [
